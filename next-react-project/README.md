@@ -1,4 +1,4 @@
-## Challenge: Creating a Route!
+# Challenge: Creating a Route!
 
 - Create a new route at `/contact`
 - Render a Page Component at `/contact`
