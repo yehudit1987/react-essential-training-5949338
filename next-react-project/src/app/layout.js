@@ -11,14 +11,17 @@ export const metadata = {
 
 function Header() {
   return (
-    <header>
-      <div>
-        <nav>
-          <div>
+    <header class="bg-slate-500 py-4">
+      <div class="container mx-auto px-4">
+        <nav class="flex items-center justify-between">
+          <div className="flex items-center">
             <Link href="/">Snowtooth Mountain</Link>
           </div>
           <div>
             <Link href="/mountain">Mountain Info</Link>
+          </div>
+          <div>
+            <Link href="/hotels">Hotels</Link>
           </div>
         </nav>
       </div>
