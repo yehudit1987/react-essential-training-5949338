@@ -14,12 +14,12 @@ const items = [
   "Macaroni and Cheese",
   "Salmon with Potatoes",
   "Tofu with Vegetables",
-  "Minestrone Soup"
+  "Minestrone Soup",
 ];
 
 const dishObjects = items.map((dish, i) => ({
   id: i,
-  title: dish
+  title: dish,
 }));
 
 function Main({ dishes }) {
@@ -29,17 +29,10 @@ function Main({ dishes }) {
         <h2>Welcome to this beautiful restaurant!</h2>
       </div>
       <main>
-        <img
-          src={chef}
-          height={200}
-          alt="A photo of a smiling chef owner"
-        />
+        <img src={chef} height={200} alt="A photo of a smiling chef owner" />
         <ul>
           {dishes.map((dish) => (
-            <li
-              key={dish.id}
-              style={{ listStyleType: "none" }}
-            >
+            <li key={dish.id} style={{ listStyleType: "none" }}>
               {dish.title}
             </li>
           ))}
@@ -50,14 +43,26 @@ function Main({ dishes }) {
 }
 
 function App() {
+  /*
+    At the previous example we saw how to close an open restaurnt and that all we was able to do. 
+    Now we want to see how to make that logic more flexible. 
+    We set the initial status to the boolean true. 
+   */
   const [status, setStatus] = useState(true);
 
   return (
     <div>
       <h1>
-        The restaurant is currently{" "}
-        {status ? "open" : "closed"}.
+        {/*
+          Here we set the status to be open if status true, else closed. So now it will be open. 
+          */}
+        The restaurant is currently {status ? "open" : "closed"}.
       </h1>
+      {/*
+        Now here we create the button. 
+        If status == true means the restaurant open so the button will be 'Close restaurant' and vice versa. 
+        And setStatus will get the oposite of current status. 
+       */}
       <button onClick={() => setStatus(!status)}>
         {status ? "Close" : "Open"} Restaurant
       </button>
