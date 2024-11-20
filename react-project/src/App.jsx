@@ -1,3 +1,7 @@
+/*
+  In this demo we will see how to change states from child componenets. 
+  We will do it by using props. 
+ */
 import { useState } from "react";
 import "./App.css";
 import chef from "./images/chef.jpg";
@@ -22,6 +26,10 @@ const dishObjects = items.map((dish, i) => ({
   title: dish
 }));
 
+/*
+  In here we create new butoon that is using the function. 
+  We also print the current status as part of h2 
+*/
 function Main({ dishes, openStatus, onStatus }) {
   return (
     <>
@@ -57,7 +65,11 @@ function Main({ dishes, openStatus, onStatus }) {
 
 function App() {
   const [status, setStatus] = useState(true);
-
+    /*
+      So in this App component we define the status and setStatus as before. 
+      Now we will also use it in the Main component. 
+      We are sending openStatus which will represent the status. 
+      We also send onStatus which will represent the function setStatus. */
   return (
     <div>
       <h1>
