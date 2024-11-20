@@ -60,7 +60,12 @@ function App() {
     (status) => !status,
     true
   );
-
+  /*
+    useEffect gets a function and a dependency array. The dependency array will determine when to fire the function.
+    So in case of empty array it will run once. 
+    In other cases it will fire whenever the variables in the arrau will change. 
+    In our case we print to console the restaurant state whenever it changes. 
+   */
   useEffect(() => {
     console.log(
       `The restaurant is ${status ? "open" : "closed"}.`
