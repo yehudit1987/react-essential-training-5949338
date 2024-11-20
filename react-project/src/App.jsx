@@ -21,6 +21,12 @@ const dishObjects = items.map((dish, i) => ({
   title: dish
 }));
 
+/* 
+  This demo is for fragments demonstration. 
+  In the main component we added new div element at the same level of main element. 
+  Without fragement that will cause errors. 
+  So the simple way to wrap it is with the fragemnt - <> </>
+*/
 function Main({ dishes }) {
   return (
     <>
