@@ -1,3 +1,7 @@
+/*
+  useReducer is a React hook that works like useState, 
+  but it allows you to use a reducer function to handle state updates. 
+*/
 import { useState, useReducer } from "react";
 import "./App.css";
 import chef from "./images/chef.jpg";
@@ -57,16 +61,16 @@ function Main({ dishes, openStatus, onStatus }) {
 
 function App() {
   // const [status, setStatus] = useState(true);
-  const [status, toggle] = useReducer(
-    (status) => !status,
-    true
-  );
+  // useReducer gets the dispatch function (=switch between true false states) and initial state (=true). 
+  const [status, toggle] = useReducer((status) => !status, true);
   return (
     <div>
       <h1>
+        {/* We use the status as before. */}
         The restaurant is currently{" "}
         {status ? "open" : "closed"}.
       </h1>
+      {/* We don't need to implement here the function logic, we just simply call it. */}
       <button onClick={toggle}>
         {status ? "Close" : "Open"} Restaurant
       </button>
