@@ -1,5 +1,8 @@
 import "./App.css";
-
+/* 
+  Here we can see other way to refernce the props. 
+  Instead of using the props.attribute we can chose in the child component, which attributes exactly we want to fetch. 
+  Just receive their names in curly braces and then refer them by their names.*/
 function Header({ name, year }) {
   return (
     <header>
