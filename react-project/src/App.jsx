@@ -1,3 +1,7 @@
+/*
+  In this demo we will se how to add pictures.
+  First notice we have an image file in the path specified below. 
+  We then import that image. */
 import "./App.css";
 import chef from "./images/chef.jpg";
 
@@ -21,13 +25,14 @@ const dishObjects = items.map((dish, i) => ({
   title: dish
 }));
 
+// In the Main component we will render the image. 
 function Main({ dishes }) {
   return (
     <main>
       <img
-        src={chef}
-        height={200}
-        alt="A photo of a smiling chef owner"
+        src={chef}  //image source
+        height={200}  // size
+        alt="A photo of a smiling chef owner"  // short description 
       />
       <ul>
         {dishes.map((dish) => (
