@@ -1,3 +1,6 @@
+/*
+  In this demo we just see how to create a form. 
+ */
 export default function Page() {
   return (
     <main className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md">
