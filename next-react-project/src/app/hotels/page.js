@@ -6,7 +6,7 @@ async function getData() {
   );
   return res.json();
 }
-
+// Here we are using the client component 
 export default async function Page() {
   const data = await getData();
   return (
