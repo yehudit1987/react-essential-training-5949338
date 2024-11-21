@@ -1,3 +1,4 @@
+// In this function we again just fetching data. 
 async function getData() {
   const res = await fetch(
     "https://snowtooth-hotel-api.fly.dev"
@@ -5,6 +6,7 @@ async function getData() {
   return res.json();
 }
 
+//  This will be a child component that gets props of the data and display them to the UI. 
 function HotelBlock({ name, capacity }) {
   return (
     <div>
@@ -14,6 +16,11 @@ function HotelBlock({ name, capacity }) {
   );
 }
 
+/*
+  In this function we get the data by calling the getData function. 
+  We then will iterate the data and for each hotel, we will call the children component 'HotelBlock',
+  passing it name and capacity of the hotel. 
+ */
 export default async function Page() {
   const data = await getData();
   return (
