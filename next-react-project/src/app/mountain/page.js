@@ -10,9 +10,7 @@
   non-blocking code using await for operations like fetching data from an API.
  */
 async function getData() {
-  const res = await fetch(
-    "https://snowtooth-api-rest.fly.dev"
-  );
+  const res = await fetch("https://snowtooth-api-rest.fly.dev");
   return res.json();
 }
 
@@ -26,20 +24,16 @@ export default async function Page() {
     <main>
       <h1>Lift Status Info</h1>
       <table>
-        {" "}
         {/* table tag to create a table */}
         <thead>
-          {" "}
           {/* thaed tag to create table headers */}
           <tr>
-            {" "}
             {/* tr tag to define table row */}
             <th>Lift Name</th> {/* th tag to define header */}
             <th>Current Status</th>
           </tr>
         </thead>
         <tbody>
-          {" "}
           {/* tbody tag for creating table body */}
           {/* Here we are iterating over data which is list of object which will refer as lift
               For each lift that will be identified with lift.id we are creating table row with 2 elements. 
